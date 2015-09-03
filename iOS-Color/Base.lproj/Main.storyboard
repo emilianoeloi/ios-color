@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="noS-uo-Fca" userLabel="Box Overlay">
+                                <rect key="frame" x="126" y="284" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.41176470590000003" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Uo6-cI-4sQ"/>
+                                    <constraint firstAttribute="width" constant="100" id="pHl-z3-P6H"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MZZ-DE-nAs" userLabel="Box">
+                                <rect key="frame" x="126" y="212" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.023529411764705882" green="0.41176470588235292" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Fjl-zV-t2Q"/>
+                                    <constraint firstAttribute="width" constant="100" id="Pgk-ef-GAk"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Overlay black 0.05alpha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4j-ja-J9e">
+                                <rect key="frame" x="85" y="333" width="185" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYy-qE-rHV">
+                                <rect key="frame" x="85" y="236" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MZZ-DE-nAs" firstAttribute="leading" secondItem="nYy-qE-rHV" secondAttribute="trailing" constant="-1" id="6yL-HX-s4w"/>
+                            <constraint firstAttribute="centerX" secondItem="MZZ-DE-nAs" secondAttribute="centerX" id="B16-ot-8iq"/>
+                            <constraint firstItem="noS-uo-Fca" firstAttribute="centerX" secondItem="MZZ-DE-nAs" secondAttribute="centerX" id="Csb-QF-HbY"/>
+                            <constraint firstItem="noS-uo-Fca" firstAttribute="top" secondItem="MZZ-DE-nAs" secondAttribute="bottom" constant="-28" id="dnK-Td-BHE"/>
+                            <constraint firstAttribute="centerY" secondItem="MZZ-DE-nAs" secondAttribute="centerY" id="le3-MH-0jy"/>
+                            <constraint firstItem="nYy-qE-rHV" firstAttribute="centerY" secondItem="MZZ-DE-nAs" secondAttribute="centerY" constant="-15.5" id="oTG-WZ-YN0"/>
+                            <constraint firstItem="noS-uo-Fca" firstAttribute="leading" secondItem="q4j-ja-J9e" secondAttribute="trailing" constant="-1" id="qud-e3-so4"/>
+                            <constraint firstItem="q4j-ja-J9e" firstAttribute="centerY" secondItem="noS-uo-Fca" secondAttribute="centerY" constant="9.5" id="wWy-fN-1fI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="box" destination="MZZ-DE-nAs" id="B6y-cA-uy0"/>
+                        <outlet property="boxOverlay" destination="noS-uo-Fca" id="ee6-Ql-V4R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
